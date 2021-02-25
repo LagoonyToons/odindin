@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/child/child.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="child" type="Area2D"]
+modulate = Color( 0.0941176, 0.34902, 0.843137, 1 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -3.49028, 3.17771 )
+scale = Vector2( 0.648198, 0.661909 )
+polygon = PoolVector2Array( 5.40538, -20.5423, 9.13786, -19.9121, 13.6426, -18.3996, 17.1177, -15.5007, 19.0483, -12.4757, 20.2066, -8.94661, 20.9788, -3.40084, 19.9492, 0.380374, 18.4047, 3.53138, 16.8602, 5.29594, 13.7713, 7.56467, 8.62303, 9.8334, 2.44513, 9.70736, -3.08924, 7.56467, -7.07914, 3.78346, -9.39585, -0.501911, -10.1681, -5.7956, -8.49491, -10.5851, -7.20785, -13.358, -5.40596, -15.6267, -2.57442, -17.3913, 1.54418, -19.66 )
+[connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]

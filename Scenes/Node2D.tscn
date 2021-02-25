@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Node2D.gd" type="Script" id=4]
+
+[node name="main" type="Node2D"]
+position = Vector2( -1.05946, 0 )
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 66.001, 38.0546 )
+
+[node name="bullet_container" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 83.0
+margin_bottom = 45.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

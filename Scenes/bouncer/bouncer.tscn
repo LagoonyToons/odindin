@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/bouncer/bouncer.gd" type="Script" id=2]
+
+[node name="bouncer" instance=ExtResource( 1 )]
+modulate = Color( 0.819608, 0.568627, 0.0352941, 1 )
+script = ExtResource( 2 )
+
+[node name="Polygon2D" parent="." index="1"]
+modulate = Color( 0.952941, 0.960784, 0.945098, 1 )
+color = Color( 1, 1, 1, 1 )

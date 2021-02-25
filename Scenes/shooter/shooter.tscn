@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/shooter/shooter.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9.52451, 10 )
+
+[node name="Enemy" type="Area2D"]
+modulate = Color( 0.941176, 0.466667, 0.466667, 1 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -0.59972, -0.251141 )
+scale = Vector2( 0.656548, 0.650419 )
+polygon = PoolVector2Array( -11.0275, -11.4948, 0.993275, -15.4723, 12.3954, -11.2296, 16.0838, 0.497502, 12.307, 11.0442, 1.17005, 15.994, -10.7624, 11.4862, -14.5631, 0.791187 )
+[connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
