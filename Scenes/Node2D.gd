@@ -1,8 +1,7 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
+
 var timer_spawn_max = 3
 var timer_spawn = timer_spawn_max
 var timer_difficulty = .1
@@ -31,7 +30,7 @@ var rainbool = true
 var scale_factor = Vector2(.5, .5)
 var star_count
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	rng.randomize()
 	open_settings()
@@ -92,5 +91,4 @@ func spawn_enemy():
 		scene_instance.init(mother_health)
 		scene_instance.baby_count = mother_baby_spawn
 	scene_instance.set_name("Enemy")
-#	scene_instance.scale(5)
 	call_deferred("add_child", scene_instance)
